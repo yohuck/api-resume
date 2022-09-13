@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/projects', (req, res) => {
     client.connect(err => {
-        const collection = client.db("test").collection("projects");
+        const collection = client.db("api-portfolio").collection("test.projects");
         collection.find().toArray((error, documents) => {
             if(error){
                 throw error;
@@ -25,7 +25,7 @@ app.get('/api/projects', (req, res) => {
 
 app.post('/api/projects', (req, res) => {
     client.connect(err => {
-        const collection = client.db("test").collection("projects");
+        const collection = client.db("api-portfolio").collection("projects");
         collection.insertOne(req.body, (error, result) => {
             if(error){
                 throw error;
