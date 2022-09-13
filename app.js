@@ -4,7 +4,6 @@ const uri = `mongodb+srv://yohuck:${process.env.API_PASSWORD}.@api-portfolio.9w4
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
 const app = express();
 require('dotenv').config()
-console.log(process.env)
 
 app.use(express.json());
 
@@ -36,6 +35,8 @@ app.post('/api/projects', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(5000, () => {
     console.log("Howdy, friend. We're listening on 3000")
 })
+
+module.exports = app
