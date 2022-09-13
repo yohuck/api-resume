@@ -23,6 +23,18 @@ app.get('/api/projects', (req, res) => {
     });
 });
 
+app.get('/api/experience', (req, res) => {
+    client.connect(err => {
+        const collection = client.db("resume").collection("experience");
+        collection.find().toArray((error, documents) => {
+            if(error){
+                throw error;
+            }
+            res.send(documents);
+        });
+    });
+});
+
 app.post('/api/projects', (req, res) => {
     client.connect(err => {
         const collection = client.db("api-portfolio").collection("projects");
