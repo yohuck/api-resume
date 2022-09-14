@@ -24,7 +24,7 @@ app.get('/api/projects', (req, res) => {
             res.send(documents);
         });
     });
-    client.close();
+    // client.close();
 });
 
 app.post('/api/projects', (req, res) => {
@@ -37,7 +37,7 @@ app.post('/api/projects', (req, res) => {
             res.send('Project added')
         });
     });
-    client.close()
+    // client.close()
 });
 
 
