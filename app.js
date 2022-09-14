@@ -1,6 +1,7 @@
 const express = require('express');
+const path = require('path')
 const {MongoClient, ServerApiVersion} = require('mongodb')
-// require('dotenv').config()
+require('dotenv').config()
 const uri = `mongodb+srv://yohuck:${process.env.API_PASSWORD}@api-portfolio.9w4o8fc.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 const app = express();
@@ -8,10 +9,12 @@ const app = express();
 
 
 
+
 app.use(express.json());
 
+
 app.get('/', (req, res) => {
-    res.send(`Howdy, friend. You've made it to my API resume.`);
+    res.sendFile(path.join(__dirname + "/public/index.html"));
 });
 
 app.get('/api/projects', (req, res) => {
