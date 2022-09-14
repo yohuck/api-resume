@@ -35,9 +35,9 @@ app.post('/api/projects', (req, res) => {
                 throw error;
             }
             res.send('Project added')
-            client.close()
         });
     });
+    client.close()
 });
 
 
