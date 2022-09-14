@@ -11,40 +11,35 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('Howdy, friend!');
+    res.send(`Howdy, friend. You've made it to my API resume.`);
 });
 
-app.get('/api/projects',  async (req, res) => {
+app.get('/api/projects', (req, res) => {
     client.connect( err => {
         const collection =   client.db("test").collection("projects");
         collection.find().toArray((error, documents) => {
             if(error){
                 throw error;
             }       
-            res.send(documents)
-           
-        })
-  
-        // perform actions on the collection object
-   
-      });
-     client.close();
+            res.send(documents);
+        });
+    });
+    client.close();
 });
 
-
-
-app.get('/api/projectos', (req, res) => {
+app.post('/api/projects', (req, res) => {
     client.connect(err => {
         const collection = client.db("test").collection("projects");
-        collection.find().toArray((error, documents) => {
+        collection.insertOne(req.body, (error, result) => {
             if(error){
                 throw error;
             }
-            res.send(documents);
+            res.send('Project added')
             client.close()
         });
     });
 });
+
 
 app.get('/api/experience', (req, res) => {
     client.connect(err => {
@@ -58,21 +53,10 @@ app.get('/api/experience', (req, res) => {
     });
 });
 
-app.post('/api/projects', (req, res) => {
-    client.connect(err => {
-        const collection = client.db("test").collection("devices");
-        collection.insertOne(req.body, (error, result) => {
-            if(error){
-                throw error;
-            }
-            res.send('maybe?')
-            client.close()
-        });
-    });
-});
+
 
 app.listen(5000, () => {
-    console.log("Howdy, friend. We're listening on 3000")
+    console.log("Howdy, friend. We're listening on 5000")
 })
 
 module.exports = app
