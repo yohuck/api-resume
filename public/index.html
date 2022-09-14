@@ -35,7 +35,7 @@
                 <p class="text"><a target="_blank" href="https://github.com/curl/curl">cURL</a> is a simple command line tool that allows you to make requests to a remote server. This is the fastest way to view my API resume.</p>
                 <ol>
                     <li><p class="text">Ensure that cURL is installed on your machine. In your favorite command line tool, execute <span class="code">curl --version<button class="button" data-text="curl curl --version" >Copy text</button></span></p><br><p>You should see some output information about the version of cURL installed on your machine. If you get a message indicating you do not have cURL installed, you may download and install <a target="_blank" href="https://curl.se/download.html">cURL</a> or use another method to view my API resume.</p></li>
-                    <li><p class="text">Once you have verified that cURL is installed, execute the following code in the command line: <br><code>curl https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/ <button class="button" data-text="curl https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></code></p></li>
+                    <li><p class="text">Once you have verified that cURL is installed, execute the following code in the command line: <br><code>curl https://eric-lake-api-resume.vercel.app/api <button class="button" data-text="curl https://eric-lake-api-resume.vercel.app/api" >Copy text</button></code></p></li>
                     <li><p class="text">The /api endpoint will list the available endpoints for you, or you can explore them <a href="#endpoints">here</a>.</p></li>
                 </ol>
             </article>
@@ -45,7 +45,7 @@
                 <ol>
                     <li class="text"><p class="text">Download and install the API client of your choice. For this demonstration, I will be using Postman.</p></li>
                     <li><p class="text">Click the "Send a request" button</p></li>
-                <li><p class="text">Select <span class="btn">GET</span> and enter the following:<span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/ <button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span> as the request URL and click <span class="btn">Send</span>.</p></li>
+                <li><p class="text">Select <span class="btn">GET</span> and enter the following:<span class="code">https://eric-lake-api-resume.vercel.app/api<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api" >Copy text</button></span> as the request URL and click <span class="btn">Send</span>.</p></li>
                 <li><p class="text">View the response JSON in your API client. The /api endpoint will list the available endpoints for you, or you can explore them <a href="#endpoints">here</a>.</p></li>
                 </ol>
             </article>
@@ -54,20 +54,20 @@
                 <p class="text">Once you're set up with cURL or an API client, you can explore my API resume using various endpoints. Endpoints are different URLs where you can make <span class="btn">GET</span> requests to view the different parts of my resume.</p><br><p class="text">See the available endpoints below:</p>
                 <ol>
                     <li>
-                        <strong>Index:</strong> shows all available routes.<span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
+                        <strong>Index:</strong> shows all available routes.<span class="code">https://eric-lake-api-resume.vercel.app/api<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api" >Copy text</button></span>
                     </li>
                     <li>
-                        <strong>Projects:</strong> View information about the projects I've built.<span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/projects<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
+                        <strong>Projects:</strong> View information about the projects I've built.<span class="code">https://eric-lake-api-resume.vercel.app/api/projects<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api/projects" >Copy text</button></span>
                     </li>
                     <li>
-                        <strong>Experience:</strong> Read about my previous career experience.<span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/projects<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
+                        <strong>Experience:</strong> Read about my previous career experience.<span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/experience<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
                     </li>
                     <li>
-                        <strong>Contact:</strong> View my preferred contact information. <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/projects<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
+                        <strong>Contact:</strong> View my preferred contact information. <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/contact<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
                     </li>
                     <li>
                         <strong>Comments:</strong> View the comments on my API resume.
-                        <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/projects<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span> <br>
+                        <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/comments<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span> <br>
                         <p class="text">You can also make a <span class="btn">POST</span> request to this endpoint in the following format to leave a comment on my API resume:</p> <pre class="code">
 
 {
