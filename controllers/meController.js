@@ -6,6 +6,7 @@ module.exports = {
         console.log('hello')
         Me.find()
         .populate('projects')
+        .populate('contacts')
             .then((users) => res.json(users))
             .catch((err) => res.status(500).json(err))
     },

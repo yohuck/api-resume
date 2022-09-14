@@ -17,11 +17,11 @@ const meSchema = new Schema(
         projects: [{
             type: Schema.Types.ObjectId,
             ref: 'project'
-        }]
-        // contacts: [{
-        //     type: Schema.Types.ObjectId,
-        //     ref: 'contact'
-        // }],
+        }],
+        contacts: {
+            type: Schema.Types.ObjectId,
+            ref: 'contact'
+        }
         // comments: [{
         //     type: Schema.Types.ObjectId,
         //     ref: 'comment'

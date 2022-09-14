@@ -14,6 +14,11 @@ const {
     createProject
 } = require('../controllers/projectController')
 
+const {
+    getContacts,
+    createContact
+} = require('../controllers/contactController')
+
 
 
 router.route('/api')
@@ -23,5 +28,9 @@ router.route('/api')
 router.route('/api/projects')
 .get(getProjects)
 .post(createProject)
+
+router.route('/api/contacts')
+.get(getContacts)
+.post(createContact)
 
 module.exports = router
