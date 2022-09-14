@@ -19,6 +19,12 @@ const {
     createContact
 } = require('../controllers/contactController')
 
+const {
+    getExperience,
+    createExperience
+} = require('../controllers/experienceController')
+
+
 
 
 router.route('/api')
@@ -32,5 +38,9 @@ router.route('/api/projects')
 router.route('/api/contacts')
 .get(getContacts)
 .post(createContact)
+
+router.route('/api/experience')
+.get(getExperience)
+.post(createExperience)
 
 module.exports = router
