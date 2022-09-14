@@ -5,7 +5,7 @@ module.exports = {
     getMe(req, res) {
         console.log('hello')
         Me.find()
-        // .populate('projects')
+        .populate('projects')
             .then((users) => res.json(users))
             .catch((err) => res.status(500).json(err))
     },

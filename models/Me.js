@@ -13,11 +13,11 @@ const meSchema = new Schema(
             required: true,
             unique: false,
             trim: true,
-        }
-        // projects: [{
-        //     type: Schema.Types.ObjectId,
-        //     ref: 'project'
-        // }],
+        },
+        projects: [{
+            type: Schema.Types.ObjectId,
+            ref: 'project'
+        }]
         // contacts: [{
         //     type: Schema.Types.ObjectId,
         //     ref: 'contact'
@@ -29,15 +29,15 @@ const meSchema = new Schema(
     },
     {
         toJSON: {
-            virtuals: false,
+            virtuals: true,
         },
         id: false,
     }
 )
 
-// meSchema.virtual('projectCount').get(function(){
-//     return this.projects.length
-// })
+meSchema.virtual('projectCount').get(function(){
+    return this.projects.length
+})
 
 const Me = model('me', meSchema)
 
