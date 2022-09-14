@@ -17,6 +17,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + "/public/index.html"));
 });
 
+app.get('/api/', (req, res) => {
+    client.connect( err => {
+        const collection =   client.db("resume").collection("routes");
+        collection.find().toArray((error, documents) => {
+            if(error){
+                throw error;
+            }       
+            res.send(documents);
+        });
+    });
+    // client.close();
+});
+
 app.get('/api/projects', (req, res) => {
     client.connect( err => {
         const collection =   client.db("test").collection("projects");
