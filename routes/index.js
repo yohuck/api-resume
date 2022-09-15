@@ -1,46 +1,55 @@
 const router = require('express').Router();
-const db = require('../config/connection')
-// const apiRoutes = require('./api');
-
-// router.use('/api')
+const db = require('../config/connection');
 
 const {
-    getMe,
-    createMe
+    getRoutes
+} = require('../controllers/routeController')
+
+const {
+    getMe
 } = require('../controllers/meController')
 
 const {
-    getProjects,
-    createProject
+    getProjects
 } = require('../controllers/projectController')
 
 const {
-    getContacts,
-    createContact
+    getContacts
 } = require('../controllers/contactController')
 
 const {
-    getExperience,
-    createExperience
+    getExperience
 } = require('../controllers/experienceController')
 
-
+const {
+    getComments,
+    createComment
+} = require('../controllers/commentController')
 
 
 router.route('/api')
+.get(getRoutes)
+
+
+router.route('/api/resume')
 .get(getMe)
-.post(createMe)
+
 
 router.route('/api/projects')
 .get(getProjects)
-.post(createProject)
+
 
 router.route('/api/contacts')
 .get(getContacts)
-.post(createContact)
+
 
 router.route('/api/experience')
 .get(getExperience)
-.post(createExperience)
+
+
+router.route('/api/comments')
+.get(getComments)
+.post(createComment)
+
 
 module.exports = router

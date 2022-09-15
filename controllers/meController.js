@@ -7,6 +7,8 @@ module.exports = {
         Me.find()
         .populate('projects')
         .populate('contacts')
+        .populate('experience')
+        .populate('comments')
             .then((users) => res.json(users))
             .catch((err) => res.status(500).json(err))
     },

@@ -18,14 +18,18 @@ const meSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'project'
         }],
+        experience: [{
+            type: Schema.Types.ObjectId,
+            ref: 'experience'
+        }],
         contacts: {
             type: Schema.Types.ObjectId,
             ref: 'contact'
-        }
-        // comments: [{
-        //     type: Schema.Types.ObjectId,
-        //     ref: 'comment'
-        // }]
+        },
+        comments: [{
+            type: Schema.Types.ObjectId,
+            ref: 'comment'
+        }]
     },
     {
         toJSON: {
