@@ -15,3 +15,9 @@ View the full documentation: https://eric-lake-api-resume.vercel.app/
 
 ## Contact
 ericallenlake@gmail.com
+
+## Credit
+This project was inspired by Christina Hastenrath's API Portfolio. Check out her work! 
+        https://twitter.com/etTinchen 
+        https://www.christinahastenrath.com/
+        https://personalapiretake.herokuapp.com/
