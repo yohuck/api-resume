@@ -44,8 +44,8 @@
                 <p class="text">API clients like <a target="_blank" href="https://www.postman.com/l">Postman</a> and <a target="_blank" href="https://insomnia.rest/">Insomnia</a> allow for interacting with APIs using a visual user interface that make it easy to test API endpoints. This is the recommended way to view my API resume.</p>
                 <ol>
                     <li class="text"><p class="text">Download and install the API client of your choice. For this demonstration, I will be using Postman.</p></li>
-                    <li><p class="text">Open up your API client and click the "Send a request" button.</p></li>
-                <li><p class="text">Select <span class="btn">GET</span> and enter the following:<span class="code">https://eric-lake-api-resume.vercel.app/api<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api" >Copy text</button></span> as the request URL and click <span class="btn">Send</span>.</p></li>
+                    <li><p class="text">Open up your API client and create a new workspace. Navigate to make a http request.</p></li>
+                <li><p class="text">Select <span class="btn">GET</span> and enter the following in the body:<span class="code">https://eric-lake-api-resume.vercel.app/api<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api" >Copy text</button></span> as the request URL and click <span class="btn">Send</span>.</p></li>
                 <li><p class="text">View the response JSON in your API client. The /api endpoint will list the available endpoints for you, or you can explore them <a href="#endpoints">here</a>.</p></li>
                 </ol>
             </article>
@@ -71,7 +71,7 @@
                     <li>
                         <strong>Comments:</strong> View the comments on my API resume.
                         <span class="code">https://eric-lake-api-resume.vercel.app/api/comments<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api/comments" >Copy text</button></span> <br>
-                        <p class="text">You can also make a <span class="btn">POST</span> request to this endpoint in the following format to leave a comment on my API resume:</p> <pre class="code">
+                        <p class="text">You can also make a <span class="btn">POST</span> request to this endpoint sending JSON as the body of your request in the following format to leave a comment on my API resume:</p> <pre class="code">
 
 {
     "name": "Your Name",
