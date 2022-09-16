@@ -39,7 +39,7 @@ router.route('/api/projects')
 .get(getProjects)
 
 
-router.route('/api/contacts')
+router.route('/api/contact')
 .get(getContacts)
 
 

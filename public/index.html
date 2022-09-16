@@ -34,7 +34,7 @@
                 <h2>Using cURL</h2>
                 <p class="text"><a target="_blank" href="https://github.com/curl/curl">cURL</a> is a simple command line tool that allows you to make requests to a remote server. This is the fastest way to view my API resume.</p>
                 <ol>
-                    <li><p class="text">Ensure that cURL is installed on your machine. In your favorite command line tool, execute <span class="code">curl --version<button class="button" data-text="curl curl --version" >Copy text</button></span></p><br><p>You should see some output information about the version of cURL installed on your machine. If you get a message indicating you do not have cURL installed, you may download and install <a target="_blank" href="https://curl.se/download.html">cURL</a> or use another method to view my API resume.</p></li>
+                    <li><p class="text">Ensure that cURL is installed on your machine. In your favorite command line interface, execute <span class="code">curl --version<button class="button" data-text="curl --version" >Copy text</button></span></p><br><p>You should see some output information about the version of cURL installed on your machine. If you get a message indicating you do not have cURL installed, you may download and install <a target="_blank" href="https://curl.se/download.html">cURL</a> or use another method to view my API resume.</p></li>
                     <li><p class="text">Once you have verified that cURL is installed, execute the following code in the command line: <br><code>curl -k https://eric-lake-api-resume.vercel.app/api <button class="button" data-text="curl -k https://eric-lake-api-resume.vercel.app/api" >Copy text</button></code></p></li>
                     <li><p class="text">The /api endpoint will list the available endpoints for you, or you can explore them <a href="#endpoints">here</a>.</p></li>
                 </ol>
@@ -54,20 +54,23 @@
                 <p class="text">Once you're set up with cURL or an API client, you can explore my API resume using various endpoints. Endpoints are different URLs where you can make <span class="btn">GET</span> requests to view the different parts of my resume.</p><br><p class="text">See the available endpoints below:</p>
                 <ol>
                     <li>
-                        <strong>Index:</strong> shows all available routes.<span class="code">https://eric-lake-api-resume.vercel.app/api<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api" >Copy text</button></span>
+                        <strong>Index:</strong> Shows all available routes.<span class="code">https://eric-lake-api-resume.vercel.app/api<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api" >Copy text</button></span>
+                    </li>
+                    <li>
+                        <strong>Resume:</strong> View Full Resume<span class="code">https://eric-lake-api-resume.vercel.app/api/resume<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api/resume" >Copy text</button></span>
                     </li>
                     <li>
                         <strong>Projects:</strong> View information about the projects I've built.<span class="code">https://eric-lake-api-resume.vercel.app/api/projects<button class="button" data-text="https://eric-lake-api-resume.vercel.app/api/projects" >Copy text</button></span>
                     </li>
                     <li>
-                        <strong>Experience:</strong> Read about my previous career experience.<span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/experience<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
+                        <strong>Experience:</strong> Read about my previous career experience.<span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/experience<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/experience" >Copy text</button></span>
                     </li>
                     <li>
-                        <strong>Contact:</strong> View my preferred contact information. <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/contact<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span>
+                        <strong>Contact:</strong> View my preferred contact information. <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/contact<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/contact" >Copy text</button></span>
                     </li>
                     <li>
                         <strong>Comments:</strong> View the comments on my API resume.
-                        <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/comments<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/" >Copy text</button></span> <br>
+                        <span class="code">https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/comments<button class="button" data-text="https://api-resume-1ywdz9qs4-yohuck.vercel.app/api/comments" >Copy text</button></span> <br>
                         <p class="text">You can also make a <span class="btn">POST</span> request to this endpoint in the following format to leave a comment on my API resume:</p> <pre class="code">
 
 {
@@ -80,6 +83,7 @@
     &quot;email&quot;: &quot;youremail@yourdomain.com&quot;,
     &quot;message&quot;: &quot;Add your message here!&quot;
 }" >Copy text</button> </pre>
+<span class="note">NOTE:</span> Message is limited to 400 characters.
                     </li>
                 </ol>
             </article>
@@ -100,12 +104,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,800;1,300&display=swap');
     :root{
-        --bg: #1F2421;
-        --art: #DCE1DE;
-        --code: #9CC5A1;
-        --btn: #49A078;
-        --link: #216869;
-        --marker: #216869;
+        --bg: #082846;
+        --art: #FFFFFF;
+        --code: #082846;
+        --btn: #F95738;
+        /* --link: #216869; */
+        --marker: #F95738;
     }
     *{
         box-sizing: border-box;
@@ -151,6 +155,7 @@
         font-size: 0.85rem;
         /* min-height: 100px; */
         align-items: flex-end;
+        color: #FFFFFF;
 
     }
 
@@ -158,12 +163,15 @@
     .btn, button{
         height: 100%;
         /* border-radius: 2rem; */
-        padding: .25rem 1rem .25rem 1rem;
+        padding: .12rem 1rem .12rem 1rem;
         background-color: var(--btn);
         color: var(--art);
+        /* font-weight: 500; */
     }
 
-
+    button:hover{
+        cursor: copy;
+    }
 
     button:focus{
         opacity: 0.9;
@@ -172,7 +180,7 @@
     }
 
     a{
-        color: var(--link);
+        /* color: var(--link); */
     }
 
     h1, h2, h3, h4{
@@ -186,7 +194,7 @@
 
     button{
         background-color: var(--marker);
-        padding: .1rem;
+        padding: .2rem;
     }
 
     @media only screen and (max-width: 800px) {
@@ -213,6 +221,7 @@
             margin-top: 1rem;
         }
 
+
         pre{
             overflow: auto;
         }
@@ -220,6 +229,12 @@
 li{
     margin: 1rem;
 }
+}
+
+.note{
+    padding: .25rem 1rem .25rem 1rem;
+        background-color: var(--btn);
+        color: var(--art);
 }
 
 </style>
